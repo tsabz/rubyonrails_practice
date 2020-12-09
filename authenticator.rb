@@ -14,6 +14,7 @@ end
 
 attempts = 1
 while attempts < 4
+  puts "you have #{attempts_left} attempts"
   print 'Username: '
   username = gets.chomp
   print 'Password: '
@@ -25,7 +26,9 @@ while attempts < 4
   break if input == 'n'
 
   attempts += 1
+
 end
+puts 'You have exceeded the number of attempts' if attempts == 4
 
 # p users
 # p users[0], users[1]
