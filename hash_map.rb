@@ -23,9 +23,9 @@ my_hash_a[:f] = 'tonia'
 
 # p my_hash_a
 
-# my_hash_a.each do |key, value|
-#   puts "#{key} equals 1? #{value == 1}"
-# end
+my_hash_a.each do |key, value|
+  puts "#{key} equals 1? #{value == 1}"
+end
 
 # a equals 1? true
 # b equals 1? false
@@ -37,11 +37,11 @@ my_hash_a[:f] = 'tonia'
 #   puts "#{lol} equals 1? #{no == 1}"
 # end
 
-is_string = my_hash_a.select { |_k, v| v.is_a?(String) }
+# is_string = my_hash_a.select { |_k, v| v.is_a?(String) }
 
-p is_string
-myhash = { a: 1, b: 2, c: 3, d: 4 }
+# p is_string
+# myhash = { a: 1, b: 2, c: 3, d: 4 }
 
-myhash.select { |k, v| myhash.delete(k) if v > 3 }
+# myhash.select { |k, v| myhash.delete(k) if v > 3 }
 
-p myhash
+# p myhash
