@@ -5,20 +5,21 @@ users = [
   { username: 'ok', password: 'no' }
 ]
 
+def auth_users(username, password, list_of_users)
+  list_of_users.each do |user_record|
+    return user_record if user_record[:username] == username && user_record[:password] == password
+  end
+  'Credentials were not correct'
+end
+
 attempts = 1
 while attempts < 4
   print 'Username: '
   username = gets.chomp
   print 'Password: '
   password = gets.chomp
-  users.each do |user|
-    if user[:username] == username && user[:password] == password
-      p 'access!'
-    else
-      p 'no access!'
-    end
-  end
-
+  authentication = auth_users(username, password, users)
+  puts authentication
   puts 'press n to quit or any other key to continue: '
   input = gets.chomp.downcase
   break if input == 'n'
