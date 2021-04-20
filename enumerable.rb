@@ -17,6 +17,5 @@ marks.group_by { |i| i }
 colors = ['red', 'green', 'blue']
 # puts colors.each_with_index { |item, index| }
 
-
 nums = [1, 2, 3, 4, 5]
-nums.each_with_index { |num, i| puts i }
+nums.each_with_index { |num, i| p }
