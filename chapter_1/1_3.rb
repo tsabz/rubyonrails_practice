@@ -9,10 +9,9 @@ s = "hello world world"
 def remove_dups(string)
    checked_chars = []
    string.each_char do |char|
-     checked_chars << char if checked_chars.include?(char) == false
-     p checked_chars
+     checked_chars << char
    end
-   checked_chars.join
+   checked_chars.uniq.join
 end
 
 p remove_dups(s)
